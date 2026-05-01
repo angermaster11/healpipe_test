@@ -5,11 +5,11 @@ client = TestClient(app)
 
 def test_normal_discount():
 
-    response = client.get("/calculate/discount?price=1000&discount_percentage=20")
+    response = client.get("/calculate/discount", params={"price": 1000, "discount_percentage": 20})
     assert response.status_code == 200
     assert response.json() == {"final_price": 800.0}
 
 def test_invalid_discount():
 
-    response = client.get("/calculate/discount?price=1000&discount_percentage=-10")
+    response = client.get("/calculate/discount", params={"price": 1000, "discount_percentage": -10})
     assert response.status_code == 400
