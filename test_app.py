@@ -2,6 +2,7 @@ from fastapi.testclient import TestClient
 from app import app
 
 client = TestClient(app)
+huh
 
 def test_normal_discount():
 
