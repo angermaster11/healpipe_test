@@ -3,7 +3,7 @@ from app import app
 
 client = TestClient(app)
 huh
-a
+
 def test_normal_discount():
 
     response = client.get("/calculate/discount?price=1000&discount_percentage=20")
