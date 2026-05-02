@@ -2,8 +2,6 @@ from fastapi.testclient import TestClient
 from app import app
 
 client = TestClient(app)
-dasdsdf
-kavya ldki hai 
 
 def test_normal_discount():
 
