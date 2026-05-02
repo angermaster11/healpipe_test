@@ -3,12 +3,18 @@ import uvicorn
 
 app = FastAPI()
 
+from fastapi import FastAPI, HTTPException
+import uvicorn  
+
+app = FastAPI()
+
 @app.get("/calculate/discount")
 def calculate_discount(price: float, discount_percentage: float):
 
-    fdfgdg
+    if discount_percentage < 0:
+        raise HTTPException(status_code=400, detail="Discount percentage cannot be negative")
     final_price = price - (price * (discount_percentage / 100))
-    return {"final_price": final_price}
+    return {"final_price": round(final_price, 2)}
 
 @app.get("/")
 def read_root():
