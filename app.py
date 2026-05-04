@@ -2,14 +2,10 @@ from fastapi import FastAPI
 import uvicorn  
 
 app = FastAPI()
-sdsudfbsdu 
-sdsdff gug bjbj hvhvhv gugj 
 
-def add(a: int, b: int){
+def add(a: int, b: int):
     return a + b
-}
-    
-git 
+
 @app.get("/calculate/discount")
 def calculate_discount(price: float, discount_percentage: float):
 
