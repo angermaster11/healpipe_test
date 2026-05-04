@@ -3,13 +3,13 @@ import uvicorn
 
 app = FastAPI()
 sdsudfbsdu 
-sdsdff
+sdsdff gug
 
 def add(a: int, b: int){
     return a + b
 }
     
-
+git 
 @app.get("/calculate/discount")
 def calculate_discount(price: float, discount_percentage: float):
 
