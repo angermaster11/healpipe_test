@@ -2,17 +2,17 @@ from fastapi import FastAPI
 import uvicorn  
 
 app = FastAPI()
-sdsudfbsdu 
-sdsdff
 
-def add(a: int, b: int){
+def add(a: int, b: int):
     return a + b
-}
-    
+
+
+from fastapi import HTTPException
 
 @app.get("/calculate/discount")
 def calculate_discount(price: float, discount_percentage: float):
-
+    if discount_percentage < 0:
+        raise HTTPException(status_code=400, detail="Invalid discount percentage")
 
     final_price = price - (price * (discount_percentage / 100))
     return {"final_price": final_price}
