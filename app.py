@@ -2,20 +2,17 @@ from fastapi import FastAPI
 import uvicorn  
 
 app = FastAPI()
-sdsudfbsdu 
-sdsdff gug
 
-def add(a: int, b: int){
+def add(a: int, b: int):
     return a + b
-}
     
-git 
 @app.get("/calculate/discount")
 def calculate_discount(price: float, discount_percentage: float):
 
 
     final_price = price - (price * (discount_percentage / 100))
     return {"final_price": final_price}
+
 
 @app.get("/")
 def read_root():
